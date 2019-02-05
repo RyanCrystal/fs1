@@ -70,13 +70,13 @@ li {
       color: #fff;
     }
     ul {
-      //   .elements {
-      //     display: flex;
-      //   }
       li {
         padding-left: 20px;
         position: relative;
         line-height: 40px;
+        :hover {
+          color: orangered;
+        }
 
         .dropdown-page {
           visibility: hidden;
@@ -103,12 +103,14 @@ li {
             // color: orange;
           }
         }
-
-        :hover {
-          color: orangered;
+        .addonlist1 {
+          color: #fff;
         }
       }
       .pages:hover {
+        & > a {
+          color: orangered;
+        }
         .dropdown-page {
           opacity: 1;
           visibility: visible;

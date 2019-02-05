@@ -51,6 +51,8 @@ li {
       padding-left: 20px;
       position: relative;
       line-height: 40px; }
+      #header .container ul li :hover {
+        color: orangered; }
       #header .container ul li .dropdown-page {
         visibility: hidden;
         opacity: 0;
@@ -68,8 +70,10 @@ li {
             color: orangered; }
           #header .container ul li .dropdown-page li a {
             color: #3b3737; }
-      #header .container ul li :hover {
-        color: orangered; }
+      #header .container ul li .addonlist1 {
+        color: #fff; }
+    #header .container ul .pages:hover > a {
+      color: orangered; }
     #header .container ul .pages:hover .dropdown-page {
       opacity: 1;
       visibility: visible; }
