@@ -1,3 +1,11 @@
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -10px, 0); }
+  100% {
+    opacity: 1;
+    transform: none; } }
+
 body {
   margin: 0;
   padding: 0;
@@ -41,75 +49,75 @@ li {
 #header {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background: #000;
-  line-height: 40px;
   position: sticky;
   top: 0; }
   #header .container {
     justify-content: space-between; }
     #header .container .logo {
       color: #fff; }
-    #header .container .menu .menu_item {
-      padding-left: 20px;
-      position: relative;
-      line-height: 40px; }
-      #header .container .menu .menu_item:hover > a {
-        color: orangered; }
-      #header .container .menu .menu_item .dropdown-page {
-        visibility: hidden;
-        opacity: 0;
-        position: absolute;
-        top: 55px;
-        left: 10px;
-        width: 150px;
-        height: 130px;
-        display: block;
-        background: #fff;
-        padding: 0;
-        padding-left: 10px;
-        transition: 500ms; }
-        #header .container .menu .menu_item .dropdown-page li {
-          display: block; }
-          #header .container .menu .menu_item .dropdown-page li :hover {
-            color: orangered; }
-          #header .container .menu .menu_item .dropdown-page li a {
-            color: #3b3737; }
-      #header .container .menu .menu_item.menu_element {
-        position: static; }
-      #header .container .menu .menu_item .elements {
-        opacity: 0;
-        visibility: hidden;
-        position: absolute;
-        display: flex;
-        top: 70px;
-        padding: 0 10px;
-        width: 100%;
-        transition: 500ms;
-        color: #000;
-        left: 0;
-        text-align: left; }
-        #header .container .menu .menu_item .elements .addonlist1 {
-          width: 100%;
+    #header .container .menu {
+      margin: 0; }
+      #header .container .menu .menu_item {
+        padding-left: 20px;
+        position: relative;
+        line-height: 60px; }
+        #header .container .menu .menu_item:hover > a {
+          color: orangered; }
+        #header .container .menu .menu_item .dropdown-page {
+          visibility: hidden;
+          opacity: 0;
+          position: absolute;
+          top: auto;
+          left: 10px;
+          width: 150px;
+          height: 150px;
           display: block;
+          line-height: 50px;
           background: #fff;
-          transition: 500ms; }
-          #header .container .menu .menu_item .elements .addonlist1 li {
+          padding: 0;
+          padding-left: 10px; }
+          #header .container .menu .menu_item .dropdown-page li {
             display: block; }
-            #header .container .menu .menu_item .elements .addonlist1 li :hover {
+            #header .container .menu .menu_item .dropdown-page li :hover {
               color: orangered; }
-          #header .container .menu .menu_item .elements .addonlist1 a {
-            color: #000; }
-          #header .container .menu .menu_item .elements .addonlist1 li {
-            display: block; }
-    #header .container .menu .menu_element:hover a {
-      color: orangered; }
-    #header .container .menu .menu_element:hover .elements {
-      opacity: 1;
-      visibility: visible; }
-    #header .container .menu .pages:hover > a {
-      color: orangered; }
-    #header .container .menu .pages:hover .dropdown-page {
-      opacity: 1;
-      visibility: visible; }
+            #header .container .menu .menu_item .dropdown-page li a {
+              color: #3b3737; }
+        #header .container .menu .menu_item.menu_element {
+          position: static; }
+        #header .container .menu .menu_item .elements {
+          opacity: 0;
+          visibility: hidden;
+          position: absolute;
+          display: flex;
+          top: auto;
+          padding: 0 10px;
+          width: 100%;
+          transition: 100ms;
+          color: #000;
+          left: 0;
+          text-align: left; }
+          #header .container .menu .menu_item .elements .addonlist {
+            width: 100%;
+            display: block;
+            background: #fff; }
+            #header .container .menu .menu_item .elements .addonlist li {
+              display: block; }
+              #header .container .menu .menu_item .elements .addonlist li :hover {
+                color: orangered; }
+            #header .container .menu .menu_item .elements .addonlist a {
+              color: #000; }
+      #header .container .menu .menu_element:hover a {
+        color: orangered; }
+      #header .container .menu .menu_element:hover .elements {
+        animation-name: fadeInDown;
+        animation-duration: 500ms;
+        opacity: 1;
+        visibility: visible; }
+      #header .container .menu .pages:hover .dropdown-page {
+        animation-name: fadeInDown;
+        animation-duration: 500ms;
+        opacity: 1;
+        visibility: visible; }
 
 #carousel {
   background: #494747;
