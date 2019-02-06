@@ -35,9 +35,11 @@ li {
   #header-top ul {
     margin: 0; }
     #header-top ul li {
-      line-height: 30px;
+      line-height: 25px;
       text-align: center;
       background: #3a3737; }
+      #header-top ul li :hover {
+        background: orangered; }
       #header-top ul li a {
         height: 25px;
         width: 25px;
@@ -53,14 +55,15 @@ li {
   top: 0; }
   #header .container {
     justify-content: space-between; }
-    #header .container .logo {
-      color: #fff; }
+    #header .container .logo img {
+      padding: 5px; }
     #header .container .menu {
       margin: 0; }
       #header .container .menu .menu_item {
         padding-left: 20px;
         position: relative;
-        line-height: 60px; }
+        line-height: 83px;
+        display: inline-block; }
         #header .container .menu .menu_item:hover > a {
           color: orangered; }
         #header .container .menu .menu_item .dropdown-page {
@@ -86,7 +89,7 @@ li {
           position: static; }
           #header .container .menu .menu_item.menu_element .hot {
             color: #fff;
-            font-size: 10px;
+            font-size: 8px;
             background: orangered;
             padding: 2px 5px;
             border-radius: 2px;
@@ -103,7 +106,6 @@ li {
           top: auto;
           padding: 0 10px;
           width: 100%;
-          transition: 100ms;
           color: #000;
           line-height: 50px;
           left: 0;
@@ -128,74 +130,78 @@ li {
         animation-duration: 500ms;
         opacity: 1;
         visibility: visible; }
-      #header .container .menu .menu_blog .blog_dropdown {
-        visibility: hidden;
-        opacity: 0;
-        background: #c7c4c4;
-        display: flex;
-        position: absolute;
-        top: auto;
-        width: 100%;
-        padding: 20px 10px;
-        width: 100%;
-        transition: 100ms;
-        color: #000;
-        line-height: 50px;
-        left: 0;
-        text-align: left; }
-        #header .container .menu .menu_blog .blog_dropdown .dropdown_content {
-          display: none; }
-          #header .container .menu .menu_blog .blog_dropdown .dropdown_content .content_container {
-            margin: 0 10px; }
-            #header .container .menu .menu_blog .blog_dropdown .dropdown_content .content_container h4 {
-              line-height: 15px;
-              margin: 10px auto; }
-            #header .container .menu .menu_blog .blog_dropdown .dropdown_content .content_container .blog {
-              height: 180px;
-              background-size: cover;
-              background-position: 50%; }
-          #header .container .menu .menu_blog .blog_dropdown .dropdown_content.active {
-            display: flex; }
-        #header .container .menu .menu_blog .blog_dropdown ul {
-          display: block; }
-          #header .container .menu .menu_blog .blog_dropdown ul .blog_dropdown_title {
+      #header .container .menu .menu_pages {
+        line-height: 88px; }
+      #header .container .menu .menu_blog {
+        line-height: 88px; }
+        #header .container .menu .menu_blog .blog_dropdown {
+          visibility: hidden;
+          opacity: 0;
+          background: #c7c4c4;
+          display: flex;
+          position: absolute;
+          top: auto;
+          width: 100%;
+          padding: 20px 10px;
+          width: 100%;
+          transition: 100ms;
+          color: #000;
+          line-height: 50px;
+          left: 0;
+          text-align: left; }
+          #header .container .menu .menu_blog .blog_dropdown .dropdown_content {
+            display: none; }
+            #header .container .menu .menu_blog .blog_dropdown .dropdown_content .content_container {
+              margin: 0 10px; }
+              #header .container .menu .menu_blog .blog_dropdown .dropdown_content .content_container h4 {
+                line-height: 15px;
+                margin: 10px auto; }
+              #header .container .menu .menu_blog .blog_dropdown .dropdown_content .content_container .blog {
+                height: 180px;
+                background-size: cover;
+                background-position: 50%; }
+            #header .container .menu .menu_blog .blog_dropdown .dropdown_content.active {
+              display: flex; }
+          #header .container .menu .menu_blog .blog_dropdown ul {
             display: block; }
-            #header .container .menu .menu_blog .blog_dropdown ul .blog_dropdown_title .active {
-              color: orangered; }
-            #header .container .menu .menu_blog .blog_dropdown ul .blog_dropdown_title a {
-              color: #3b3737; }
-        #header .container .menu .menu_blog .blog_dropdown .fashion_dropdown_content .content_container .fashion_blog_1 {
-          background: url(https://source.unsplash.com/250x181/?fashion) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .fashion_dropdown_content .content_container .fashion_blog_2 {
-          background: url(https://source.unsplash.com/250x182/?fashion) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .fashion_dropdown_content .content_container .fashion_blog_3 {
-          background: url(https://source.unsplash.com/250x183/?fashion) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .fashion_dropdown_content .content_container .fashion_blog_4 {
-          background: url(https://source.unsplash.com/250x184/?fashion) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .music_dropdown_content .content_container .music_blog_1 {
-          background: url(https://source.unsplash.com/250x181/?music) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .music_dropdown_content .content_container .music_blog_2 {
-          background: url(https://source.unsplash.com/250x182/?music) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .music_dropdown_content .content_container .music_blog_3 {
-          background: url(https://source.unsplash.com/250x183/?music) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .music_dropdown_content .content_container .music_blog_4 {
-          background: url(https://source.unsplash.com/250x184/?music) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .photography_dropdown_content .content_container .photography_blog_1 {
-          background: url(https://source.unsplash.com/250x181/?photography) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .photography_dropdown_content .content_container .photography_blog_2 {
-          background: url(https://source.unsplash.com/250x182/?photography) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .photography_dropdown_content .content_container .photography_blog_3 {
-          background: url(https://source.unsplash.com/250x183/?photography) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .photography_dropdown_content .content_container .photography_blog_4 {
-          background: url(https://source.unsplash.com/250x184/?photography) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .technology_dropdown_content .content_container .technology_blog_1 {
-          background: url(https://source.unsplash.com/250x181/?technology) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .technology_dropdown_content .content_container .technology_blog_2 {
-          background: url(https://source.unsplash.com/250x182/?technology) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .technology_dropdown_content .content_container .technology_blog_3 {
-          background: url(https://source.unsplash.com/250x183/?technology) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .technology_dropdown_content .content_container .technology_blog_4 {
-          background: url(https://source.unsplash.com/250x184/?technology) no-repeat; }
+            #header .container .menu .menu_blog .blog_dropdown ul .blog_dropdown_title {
+              display: block; }
+              #header .container .menu .menu_blog .blog_dropdown ul .blog_dropdown_title .active {
+                color: orangered; }
+              #header .container .menu .menu_blog .blog_dropdown ul .blog_dropdown_title a {
+                color: #3b3737; }
+          #header .container .menu .menu_blog .blog_dropdown .fashion_dropdown_content .content_container .fashion_blog_1 {
+            background: url(https://source.unsplash.com/250x181/?fashion) no-repeat; }
+          #header .container .menu .menu_blog .blog_dropdown .fashion_dropdown_content .content_container .fashion_blog_2 {
+            background: url(https://source.unsplash.com/250x182/?fashion) no-repeat; }
+          #header .container .menu .menu_blog .blog_dropdown .fashion_dropdown_content .content_container .fashion_blog_3 {
+            background: url(https://source.unsplash.com/250x183/?fashion) no-repeat; }
+          #header .container .menu .menu_blog .blog_dropdown .fashion_dropdown_content .content_container .fashion_blog_4 {
+            background: url(https://source.unsplash.com/250x184/?fashion) no-repeat; }
+          #header .container .menu .menu_blog .blog_dropdown .music_dropdown_content .content_container .music_blog_1 {
+            background: url(https://source.unsplash.com/250x181/?music) no-repeat; }
+          #header .container .menu .menu_blog .blog_dropdown .music_dropdown_content .content_container .music_blog_2 {
+            background: url(https://source.unsplash.com/250x182/?music) no-repeat; }
+          #header .container .menu .menu_blog .blog_dropdown .music_dropdown_content .content_container .music_blog_3 {
+            background: url(https://source.unsplash.com/250x183/?music) no-repeat; }
+          #header .container .menu .menu_blog .blog_dropdown .music_dropdown_content .content_container .music_blog_4 {
+            background: url(https://source.unsplash.com/250x184/?music) no-repeat; }
+          #header .container .menu .menu_blog .blog_dropdown .photography_dropdown_content .content_container .photography_blog_1 {
+            background: url(https://source.unsplash.com/250x181/?photography) no-repeat; }
+          #header .container .menu .menu_blog .blog_dropdown .photography_dropdown_content .content_container .photography_blog_2 {
+            background: url(https://source.unsplash.com/250x182/?photography) no-repeat; }
+          #header .container .menu .menu_blog .blog_dropdown .photography_dropdown_content .content_container .photography_blog_3 {
+            background: url(https://source.unsplash.com/250x183/?photography) no-repeat; }
+          #header .container .menu .menu_blog .blog_dropdown .photography_dropdown_content .content_container .photography_blog_4 {
+            background: url(https://source.unsplash.com/250x184/?photography) no-repeat; }
+          #header .container .menu .menu_blog .blog_dropdown .technology_dropdown_content .content_container .technology_blog_1 {
+            background: url(https://source.unsplash.com/250x181/?technology) no-repeat; }
+          #header .container .menu .menu_blog .blog_dropdown .technology_dropdown_content .content_container .technology_blog_2 {
+            background: url(https://source.unsplash.com/250x182/?technology) no-repeat; }
+          #header .container .menu .menu_blog .blog_dropdown .technology_dropdown_content .content_container .technology_blog_3 {
+            background: url(https://source.unsplash.com/250x183/?technology) no-repeat; }
+          #header .container .menu .menu_blog .blog_dropdown .technology_dropdown_content .content_container .technology_blog_4 {
+            background: url(https://source.unsplash.com/250x184/?technology) no-repeat; }
       #header .container .menu .menu_blog:hover .blog_dropdown {
         animation-name: fadeInDown;
         animation-duration: 500ms;

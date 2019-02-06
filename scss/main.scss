@@ -10,9 +10,9 @@
 }
 @mixin moveDown {
   animation-name: fadeInDown;
-          animation-duration: 500ms;
-          opacity: 1;
-          visibility: visible;
+  animation-duration: 500ms;
+  opacity: 1;
+  visibility: visible;
 }
 
 $dropdown-color: rgb(59, 55, 55);
@@ -54,9 +54,12 @@ li {
     margin: 0;
 
     li {
-      line-height: 30px;
+      line-height: 25px;
 
       text-align: center;
+      :hover{
+        background: orangered;
+      }
 
       background: rgb(58, 55, 55);
       a {
@@ -84,14 +87,19 @@ li {
   .container {
     justify-content: space-between;
     .logo {
-      color: #fff;
+      img{
+        padding: 5px;  
+      }
+     
+      // background:url('../dist/img/logo.png');
     }
     .menu {
       margin: 0;
       .menu_item {
         padding-left: 20px;
         position: relative;
-        line-height: 60px;
+        line-height: 83px;
+        display: inline-block;
         &:hover {
           & > a {
             color: orangered;
@@ -128,7 +136,7 @@ li {
           position: static;
           .hot{
             color: #fff;
-            font-size: 10px;
+             font-size: 8px;
             background:orangered ;
             padding: 2px 5px;
             border-radius: 2px;
@@ -148,7 +156,7 @@ li {
           top: auto;
           padding: 0 10px;
           width: 100%;
-          transition: 100ms;
+          // transition: 100ms;
           color: #000;
           line-height: 50px;
           // height: 500px;
@@ -184,9 +192,12 @@ li {
          @include moveDown;
         }
       }
-     
+     .menu_pages{
+       line-height: 88px;
+     }
       .menu_blog {
         // display: none;
+        line-height: 88px;
        
         .blog_dropdown {
           visibility: hidden;
