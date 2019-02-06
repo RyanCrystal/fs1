@@ -21,8 +21,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  //   line-height: 50px;
-  //   background: red;
 }
 .container {
   width: 80%;
@@ -128,6 +126,16 @@ li {
         }
         &.menu_element {
           position: static;
+          .hot{
+            color: #fff;
+            font-size: 10px;
+            background:orangered ;
+            padding: 2px 5px;
+            border-radius: 2px;
+            position: relative;
+            margin-left: 2px;
+            top:-5px;
+          }
         }
         &.menu_blog {
           position: static;
@@ -199,7 +207,7 @@ li {
           text-align: left;
           .dropdown_content{
             display: none;
-            .content_1{
+            .content_container{
               margin: 0 10px;
               h4 {
                 line-height: 15px;
@@ -237,7 +245,7 @@ li {
 
           .fashion_dropdown_content {
 
-            .content_1 {
+            .content_container {
               @for $x from 1 through 4 {
                 .fashion_blog_#{$x} {
                   background: url(https://source.unsplash.com/250x18#{$x}/?fashion)
@@ -250,7 +258,7 @@ li {
           }
           .music_dropdown_content {
             
-            .content_1 {
+            .content_container {
               @for $x from 1 through 4 {
                 .music_blog_#{$x} {
                   background: url(https://source.unsplash.com/250x18#{$x}/?music)
@@ -263,7 +271,7 @@ li {
           }
           .photography_dropdown_content {
           
-            .content_1 {
+            .content_container {
               @for $x from 1 through 4 {
                 .photography_blog_#{$x} {
                   background: url(https://source.unsplash.com/250x18#{$x}/?photography)
@@ -275,7 +283,7 @@ li {
             }
           }
           .technology_dropdown_content {
-          .content_1 {
+          .content_container {
             @for $x from 1 through 4 {
               .technology_blog_#{$x} {
                 background: url(https://source.unsplash.com/250x18#{$x}/?technology)

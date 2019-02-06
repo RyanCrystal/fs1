@@ -84,6 +84,15 @@ li {
               color: #3b3737; }
         #header .container .menu .menu_item.menu_element {
           position: static; }
+          #header .container .menu .menu_item.menu_element .hot {
+            color: #fff;
+            font-size: 10px;
+            background: orangered;
+            padding: 2px 5px;
+            border-radius: 2px;
+            position: relative;
+            margin-left: 2px;
+            top: -5px; }
         #header .container .menu .menu_item.menu_blog {
           position: static; }
         #header .container .menu .menu_item .elements {
@@ -136,12 +145,12 @@ li {
         text-align: left; }
         #header .container .menu .menu_blog .blog_dropdown .dropdown_content {
           display: none; }
-          #header .container .menu .menu_blog .blog_dropdown .dropdown_content .content_1 {
+          #header .container .menu .menu_blog .blog_dropdown .dropdown_content .content_container {
             margin: 0 10px; }
-            #header .container .menu .menu_blog .blog_dropdown .dropdown_content .content_1 h4 {
+            #header .container .menu .menu_blog .blog_dropdown .dropdown_content .content_container h4 {
               line-height: 15px;
               margin: 10px auto; }
-            #header .container .menu .menu_blog .blog_dropdown .dropdown_content .content_1 .blog {
+            #header .container .menu .menu_blog .blog_dropdown .dropdown_content .content_container .blog {
               height: 180px;
               background-size: cover;
               background-position: 50%; }
@@ -155,37 +164,37 @@ li {
               color: orangered; }
             #header .container .menu .menu_blog .blog_dropdown ul .blog_dropdown_title a {
               color: #3b3737; }
-        #header .container .menu .menu_blog .blog_dropdown .fashion_dropdown_content .content_1 .fashion_blog_1 {
+        #header .container .menu .menu_blog .blog_dropdown .fashion_dropdown_content .content_container .fashion_blog_1 {
           background: url(https://source.unsplash.com/250x181/?fashion) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .fashion_dropdown_content .content_1 .fashion_blog_2 {
+        #header .container .menu .menu_blog .blog_dropdown .fashion_dropdown_content .content_container .fashion_blog_2 {
           background: url(https://source.unsplash.com/250x182/?fashion) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .fashion_dropdown_content .content_1 .fashion_blog_3 {
+        #header .container .menu .menu_blog .blog_dropdown .fashion_dropdown_content .content_container .fashion_blog_3 {
           background: url(https://source.unsplash.com/250x183/?fashion) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .fashion_dropdown_content .content_1 .fashion_blog_4 {
+        #header .container .menu .menu_blog .blog_dropdown .fashion_dropdown_content .content_container .fashion_blog_4 {
           background: url(https://source.unsplash.com/250x184/?fashion) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .music_dropdown_content .content_1 .music_blog_1 {
+        #header .container .menu .menu_blog .blog_dropdown .music_dropdown_content .content_container .music_blog_1 {
           background: url(https://source.unsplash.com/250x181/?music) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .music_dropdown_content .content_1 .music_blog_2 {
+        #header .container .menu .menu_blog .blog_dropdown .music_dropdown_content .content_container .music_blog_2 {
           background: url(https://source.unsplash.com/250x182/?music) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .music_dropdown_content .content_1 .music_blog_3 {
+        #header .container .menu .menu_blog .blog_dropdown .music_dropdown_content .content_container .music_blog_3 {
           background: url(https://source.unsplash.com/250x183/?music) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .music_dropdown_content .content_1 .music_blog_4 {
+        #header .container .menu .menu_blog .blog_dropdown .music_dropdown_content .content_container .music_blog_4 {
           background: url(https://source.unsplash.com/250x184/?music) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .photography_dropdown_content .content_1 .photography_blog_1 {
+        #header .container .menu .menu_blog .blog_dropdown .photography_dropdown_content .content_container .photography_blog_1 {
           background: url(https://source.unsplash.com/250x181/?photography) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .photography_dropdown_content .content_1 .photography_blog_2 {
+        #header .container .menu .menu_blog .blog_dropdown .photography_dropdown_content .content_container .photography_blog_2 {
           background: url(https://source.unsplash.com/250x182/?photography) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .photography_dropdown_content .content_1 .photography_blog_3 {
+        #header .container .menu .menu_blog .blog_dropdown .photography_dropdown_content .content_container .photography_blog_3 {
           background: url(https://source.unsplash.com/250x183/?photography) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .photography_dropdown_content .content_1 .photography_blog_4 {
+        #header .container .menu .menu_blog .blog_dropdown .photography_dropdown_content .content_container .photography_blog_4 {
           background: url(https://source.unsplash.com/250x184/?photography) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .technology_dropdown_content .content_1 .technology_blog_1 {
+        #header .container .menu .menu_blog .blog_dropdown .technology_dropdown_content .content_container .technology_blog_1 {
           background: url(https://source.unsplash.com/250x181/?technology) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .technology_dropdown_content .content_1 .technology_blog_2 {
+        #header .container .menu .menu_blog .blog_dropdown .technology_dropdown_content .content_container .technology_blog_2 {
           background: url(https://source.unsplash.com/250x182/?technology) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .technology_dropdown_content .content_1 .technology_blog_3 {
+        #header .container .menu .menu_blog .blog_dropdown .technology_dropdown_content .content_container .technology_blog_3 {
           background: url(https://source.unsplash.com/250x183/?technology) no-repeat; }
-        #header .container .menu .menu_blog .blog_dropdown .technology_dropdown_content .content_1 .technology_blog_4 {
+        #header .container .menu .menu_blog .blog_dropdown .technology_dropdown_content .content_container .technology_blog_4 {
           background: url(https://source.unsplash.com/250x184/?technology) no-repeat; }
       #header .container .menu .menu_blog:hover .blog_dropdown {
         animation-name: fadeInDown;
