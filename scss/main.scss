@@ -8,6 +8,14 @@
     transform: none;
   }
 }
+@mixin moveDown {
+  animation-name: fadeInDown;
+          animation-duration: 500ms;
+          opacity: 1;
+          visibility: visible;
+}
+
+$dropdown-color: rgb(59, 55, 55);
 
 body {
   margin: 0;
@@ -118,13 +126,15 @@ li {
               color: orangered;
             }
             a {
-              color: rgb(59, 55, 55);
+              color: $dropdown-color;
             }
-            // padding: 10px 5px;
-            // color: orange;
+         
           }
         }
         &.menu_element {
+          position: static;
+        }
+        &.menu_blog {
           position: static;
         }
         .elements {
@@ -137,13 +147,11 @@ li {
           width: 100%;
           transition: 100ms;
           color: #000;
+          line-height: 50px;
           // height: 500px;
           left: 0;
           text-align: left;
-          // right: auto;
-          // a:hover {
-          //   color: orangered;
-          // }
+         
           .addonlist {
             // top: auto;
             width: 100%;
@@ -156,38 +164,184 @@ li {
               }
             }
             a {
-              color: #000;
+              color: $dropdown-color;
             }
-
-            // padding: 0;
-            // transition: 500ms;
-
-            // li {
-            //   display: block;
-            // }
           }
         }
       }
       .menu_element:hover {
-        a {
-          color: orangered;
-        }
+       
         .elements {
-          animation-name: fadeInDown;
-          animation-duration: 500ms;
-          opacity: 1;
-          visibility: visible;
+          @include moveDown;
         }
       }
-      .pages:hover {
-        // & > a {
-        //   color: orangered;
-        // }
+      .menu_pages:hover {
+        
         .dropdown-page {
-          animation-name: fadeInDown;
-          animation-duration: 500ms;
-          opacity: 1;
-          visibility: visible;
+         @include moveDown;
+        }
+      }
+     
+      .menu_blog {
+        // display: none;
+       
+        .blog_dropdown {
+          visibility: hidden;
+          opacity: 0;
+          background: rgb(199, 196, 196);
+          display: flex;
+          // display: none;
+          position: absolute;
+          top: auto;
+          width: 100%;
+          padding: 20px 10px;
+          width: 100%;
+          transition: 100ms;
+          color: #000;
+          line-height: 50px;
+          // height: 500px;
+          left: 0;
+          text-align: left;
+          .dropdown_content{
+            display: none;
+            .content_1{
+              margin: 0 10px;
+              h4 {
+                line-height: 15px;
+                margin: 10px auto;
+              }
+              .blog {
+                height: 180px;
+                // position: relative;
+                
+                background-size: cover;
+                background-position: 50%;
+              }
+            }
+            &.active{
+              display: flex;
+            }
+          }
+          
+
+          ul {
+        
+            display: block;
+            .blog_dropdown_title {
+              
+              display: block;
+             
+              .active{
+                color: orangered;
+              }
+              a {
+                color: $dropdown-color;
+              }
+            }
+          }
+
+          .fashion_dropdown_content {
+            
+            // display: flex;
+            // display: none;
+            .content_1 {
+              
+              .fashion_blog_1{
+                background: url(https://source.unsplash.com/250x201/?fashion)
+                no-repeat;
+              }
+              .fashion_blog_2{
+                background: url(https://source.unsplash.com/250x202/?fashion)
+                no-repeat;
+              }
+              .fashion_blog_3{
+                background: url(https://source.unsplash.com/250x203/?fashion)
+                no-repeat;
+              }
+              .fashion_blog_4{
+                background: url(https://source.unsplash.com/250x204/?fashion)
+                no-repeat;
+              }
+
+            }
+          }
+          .music_dropdown_content {
+            // opacity: 0;
+            // display: flex;
+            // display: none;
+            .content_1 {
+              
+              .music_blog_1{
+                background: url(https://source.unsplash.com/250x201/?music)
+                no-repeat;
+              }
+              .music_blog_2{
+                background: url(https://source.unsplash.com/250x202/?music)
+                no-repeat;
+              }
+              .music_blog_3{
+                background: url(https://source.unsplash.com/250x203/?music)
+                no-repeat;
+              }
+              .music_blog_4{
+                background: url(https://source.unsplash.com/250x204/?music)
+                no-repeat;
+              }
+
+            }
+          }
+          .photography_dropdown_content {
+            // opacity: 0;
+            // display: flex;
+            //  display: none;
+            .content_1 {
+             
+              .photography_blog_1{
+                background: url(https://source.unsplash.com/250x201/?photography)
+                no-repeat;
+              }
+              .photography_blog_2{
+                background: url(https://source.unsplash.com/250x202/?photography)
+                no-repeat;
+              }
+              .photography_blog_3{
+                background: url(https://source.unsplash.com/250x203/?photography)
+                no-repeat;
+              }
+              .photography_blog_4{
+                background: url(https://source.unsplash.com/250x204/?photography)
+                no-repeat;
+              }
+
+            }
+          }
+          .technology_dropdown_content {
+          .content_1 {
+            
+              .technology_blog_1{
+                background: url(https://source.unsplash.com/250x201/?technology)
+                no-repeat;
+              }
+              .technology_blog_2{
+                background: url(https://source.unsplash.com/250x202/?technology)
+                no-repeat;
+              }
+              .technology_blog_3{
+                background: url(https://source.unsplash.com/250x203/?technology)
+                no-repeat;
+              }
+              .technology_blog_4{
+                background: url(https://source.unsplash.com/250x204/?technology)
+                no-repeat;
+              }
+
+            }
+          }
+        }
+      }
+      .menu_blog:hover{
+        .blog_dropdown{
+          @include moveDown;
         }
       }
     }

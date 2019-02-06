@@ -12,6 +12,7 @@
       integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
       crossorigin="anonymous"
     />
+    
   </head>
   <body>
     <section id="header-top">
@@ -41,7 +42,7 @@
     </section>
     <section id="header">
       <div class="container">
-        <div class="logo">Logo</div>
+        <div class="logo" id="logo">Logo</div>
         <ul class="menu">
           <li class="menu_item"><a href="">Home</a></li>
           <li class="menu_item"><a href="">About</a></li>
@@ -50,7 +51,7 @@
             <!-- <span class="element-dropdown"> -->
             <div class="elements">
               <ul class="addonlist">
-                <li><a href=""> ADDONLIST 1</a></li>
+                <li><a href=""><strong>ADDONLIST</strong></a></li>
                 <li>
                   <a href="">Acoordion</a>
                 </li>
@@ -60,7 +61,7 @@
                 <li><a href="">Feature Box</a></li>
               </ul>
               <ul class="addonlist">
-                <li><a href=""> ADDONLIST 1</a></li>
+                <li><a href=""><strong>ADDONLIST</strong></a></li>
                 <li>
                   <a href="">Acoordion</a>
                 </li>
@@ -70,7 +71,7 @@
                 <li><a href="">Feature Box</a></li>
               </ul>
               <ul class="addonlist">
-                <li><a href=""> ADDONLIST 1</a></li>
+                <li><a href=""><strong>ADDONLIST</strong></a></li>
                 <li>
                   <a href="">Acoordion</a>
                 </li>
@@ -80,7 +81,7 @@
                 <li><a href="">Feature Box</a></li>
               </ul>
               <ul class=" addonlist">
-                <li><a href=""> ADDONLIST 1</a></li>
+                <li><a href=""><strong>ADDONLIST</strong></a></li>
                 <li>
                   <a href="">Acoordion</a>
                 </li>
@@ -95,22 +96,152 @@
           </li>
           <li class="menu_item"><a href="">Pricing</a></li>
           <li class="menu_item"><a href="">Portfolio</a></li>
-          <li class="menu_item pages">
+          <li class="menu_item menu_pages">
             <a href="">Pages <i class="fas fa-angle-down"></i></a>
 
             <ul class="dropdown-page">
-              <li><a href="#">Service</a></li>
+              <li><a class="active" href="#">Service</a></li>
               <li><a href="#">Contact</a></li>
               <li><a href="#">Coming soon</a></li>
             </ul>
           </li>
-          <li class="menu_item">
+          <li class="menu_item menu_blog">
             <a href="">Blog <i class="fas fa-angle-down"></i></a>
+            <div class="blog_dropdown">
+              <ul class="blog_dropdown_titles">
+                <li class="blog_dropdown_title active"><a
+                  class="active" href="">Fashion</a></li>
+                <li class="blog_dropdown_title"><a href="">Music</a></li>
+                <li class="blog_dropdown_title"><a href="">Photography</a></li>
+                <li class="blog_dropdown_title"><a href="">Technology</a></li>
+              </ul>
+              <div class="fashion_dropdown_content dropdown_content active">
+                <div class="content_1">
+                  <div class="blog fashion_blog_1"></div>
+                  <h4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                    ut.
+                  </h4>
+                </div>
+                <div class="content_1">
+                  <div class="blog fashion_blog_2"></div>
+                  <h4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                    ut.
+                  </h4>
+                </div>
+                <div class="content_1">
+                  <div class="blog fashion_blog_3"></div>
+                  <h4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                    ut.
+                  </h4>
+                </div>
+                <div class="content_1">
+                  <div class="blog fashion_blog_4"></div>
+                  <h4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                    ut.
+                  </h4>
+                </div>
+              </div>
+              <div class="music_dropdown_content dropdown_content">
+                <div class="content_1">
+                  <div class="blog music_blog_1"></div>
+                  <h4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                    ut.
+                  </h4>
+                </div>
+                <div class="content_1">
+                  <div class="blog music_blog_2"></div>
+                  <h4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                    ut.
+                  </h4>
+                </div>
+                <div class="content_1">
+                  <div class="blog music_blog_3"></div>
+                  <h4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                    ut.
+                  </h4>
+                </div>
+                <div class="content_1">
+                  <div class="blog music_blog_4"></div>
+                  <h4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                    ut.
+                  </h4>
+                </div>
+              </div>
+              <div class="photography_dropdown_content dropdown_content">
+                <div class="content_1">
+                  <div class="blog photography_blog_1"></div>
+                  <h4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                    ut.
+                  </h4>
+                </div>
+                <div class="content_1">
+                  <div class="blog photography_blog_2"></div>
+                  <h4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                    ut.
+                  </h4>
+                </div>
+                <div class="content_1">
+                  <div class="blog photography_blog_3"></div>
+                  <h4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                    ut.
+                  </h4>
+                </div>
+                <div class="content_1">
+                  <div class="blog photography_blog_4"></div>
+                  <h4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                    ut.
+                  </h4>
+                </div>
+              </div>
+              <div class="technology_dropdown_content dropdown_content">
+                <div class="content_1">
+                  <div class="blog technology_blog_1"></div>
+                  <h4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                    ut.
+                  </h4>
+                </div>
+                <div class="content_1">
+                  <div class="blog technology_blog_2"></div>
+                  <h4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                    ut.
+                  </h4>
+                </div>
+                <div class="content_1">
+                  <div class="blog technology_blog_3"></div>
+                  <h4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                    ut.
+                  </h4>
+                </div>
+                <div class="content_1">
+                  <div class="blog technology_blog_4"></div>
+                  <h4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                    ut.
+                  </h4>
+                </div>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
     </section>
 
     <section id="carousel"></section>
+    <script src="js/main.js"></script>
   </body>
 </html>

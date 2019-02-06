@@ -84,6 +84,8 @@ li {
               color: #3b3737; }
         #header .container .menu .menu_item.menu_element {
           position: static; }
+        #header .container .menu .menu_item.menu_blog {
+          position: static; }
         #header .container .menu .menu_item .elements {
           opacity: 0;
           visibility: hidden;
@@ -94,6 +96,7 @@ li {
           width: 100%;
           transition: 100ms;
           color: #000;
+          line-height: 50px;
           left: 0;
           text-align: left; }
           #header .container .menu .menu_item .elements .addonlist {
@@ -105,15 +108,86 @@ li {
               #header .container .menu .menu_item .elements .addonlist li :hover {
                 color: orangered; }
             #header .container .menu .menu_item .elements .addonlist a {
-              color: #000; }
-      #header .container .menu .menu_element:hover a {
-        color: orangered; }
+              color: #3b3737; }
       #header .container .menu .menu_element:hover .elements {
         animation-name: fadeInDown;
         animation-duration: 500ms;
         opacity: 1;
         visibility: visible; }
-      #header .container .menu .pages:hover .dropdown-page {
+      #header .container .menu .menu_pages:hover .dropdown-page {
+        animation-name: fadeInDown;
+        animation-duration: 500ms;
+        opacity: 1;
+        visibility: visible; }
+      #header .container .menu .menu_blog .blog_dropdown {
+        visibility: hidden;
+        opacity: 0;
+        background: #c7c4c4;
+        display: flex;
+        position: absolute;
+        top: auto;
+        width: 100%;
+        padding: 20px 10px;
+        width: 100%;
+        transition: 100ms;
+        color: #000;
+        line-height: 50px;
+        left: 0;
+        text-align: left; }
+        #header .container .menu .menu_blog .blog_dropdown .dropdown_content {
+          display: none; }
+          #header .container .menu .menu_blog .blog_dropdown .dropdown_content .content_1 {
+            margin: 0 10px; }
+            #header .container .menu .menu_blog .blog_dropdown .dropdown_content .content_1 h4 {
+              line-height: 15px;
+              margin: 10px auto; }
+            #header .container .menu .menu_blog .blog_dropdown .dropdown_content .content_1 .blog {
+              height: 180px;
+              background-size: cover;
+              background-position: 50%; }
+          #header .container .menu .menu_blog .blog_dropdown .dropdown_content.active {
+            display: flex; }
+        #header .container .menu .menu_blog .blog_dropdown ul {
+          display: block; }
+          #header .container .menu .menu_blog .blog_dropdown ul .blog_dropdown_title {
+            display: block; }
+            #header .container .menu .menu_blog .blog_dropdown ul .blog_dropdown_title .active {
+              color: orangered; }
+            #header .container .menu .menu_blog .blog_dropdown ul .blog_dropdown_title a {
+              color: #3b3737; }
+        #header .container .menu .menu_blog .blog_dropdown .fashion_dropdown_content .content_1 .fashion_blog_1 {
+          background: url(https://source.unsplash.com/250x201/?fashion) no-repeat; }
+        #header .container .menu .menu_blog .blog_dropdown .fashion_dropdown_content .content_1 .fashion_blog_2 {
+          background: url(https://source.unsplash.com/250x202/?fashion) no-repeat; }
+        #header .container .menu .menu_blog .blog_dropdown .fashion_dropdown_content .content_1 .fashion_blog_3 {
+          background: url(https://source.unsplash.com/250x203/?fashion) no-repeat; }
+        #header .container .menu .menu_blog .blog_dropdown .fashion_dropdown_content .content_1 .fashion_blog_4 {
+          background: url(https://source.unsplash.com/250x204/?fashion) no-repeat; }
+        #header .container .menu .menu_blog .blog_dropdown .music_dropdown_content .content_1 .music_blog_1 {
+          background: url(https://source.unsplash.com/250x201/?music) no-repeat; }
+        #header .container .menu .menu_blog .blog_dropdown .music_dropdown_content .content_1 .music_blog_2 {
+          background: url(https://source.unsplash.com/250x202/?music) no-repeat; }
+        #header .container .menu .menu_blog .blog_dropdown .music_dropdown_content .content_1 .music_blog_3 {
+          background: url(https://source.unsplash.com/250x203/?music) no-repeat; }
+        #header .container .menu .menu_blog .blog_dropdown .music_dropdown_content .content_1 .music_blog_4 {
+          background: url(https://source.unsplash.com/250x204/?music) no-repeat; }
+        #header .container .menu .menu_blog .blog_dropdown .photography_dropdown_content .content_1 .photography_blog_1 {
+          background: url(https://source.unsplash.com/250x201/?photography) no-repeat; }
+        #header .container .menu .menu_blog .blog_dropdown .photography_dropdown_content .content_1 .photography_blog_2 {
+          background: url(https://source.unsplash.com/250x202/?photography) no-repeat; }
+        #header .container .menu .menu_blog .blog_dropdown .photography_dropdown_content .content_1 .photography_blog_3 {
+          background: url(https://source.unsplash.com/250x203/?photography) no-repeat; }
+        #header .container .menu .menu_blog .blog_dropdown .photography_dropdown_content .content_1 .photography_blog_4 {
+          background: url(https://source.unsplash.com/250x204/?photography) no-repeat; }
+        #header .container .menu .menu_blog .blog_dropdown .technology_dropdown_content .content_1 .technology_blog_1 {
+          background: url(https://source.unsplash.com/250x201/?technology) no-repeat; }
+        #header .container .menu .menu_blog .blog_dropdown .technology_dropdown_content .content_1 .technology_blog_2 {
+          background: url(https://source.unsplash.com/250x202/?technology) no-repeat; }
+        #header .container .menu .menu_blog .blog_dropdown .technology_dropdown_content .content_1 .technology_blog_3 {
+          background: url(https://source.unsplash.com/250x203/?technology) no-repeat; }
+        #header .container .menu .menu_blog .blog_dropdown .technology_dropdown_content .content_1 .technology_blog_4 {
+          background: url(https://source.unsplash.com/250x204/?technology) no-repeat; }
+      #header .container .menu .menu_blog:hover .blog_dropdown {
         animation-name: fadeInDown;
         animation-duration: 500ms;
         opacity: 1;
