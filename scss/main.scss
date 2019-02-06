@@ -47,9 +47,7 @@ li {
 
     line-height: 50px;
   }
-  //   width: 80%;
-  //   margin: 0 100px;
-  //   display: inline-block;
+
   background: rgb(19, 18, 18);
   color: #fff;
   border-bottom: 1px solid rgb(80, 78, 78);
@@ -116,9 +114,6 @@ li {
           background: #fff;
           padding: 0;
           padding-left: 10px;
-          // transition: all 500ms ease-in-out;
-          // animation-name: fadeInDown;
-          // animation-duration: 500ms;
 
           li {
             display: block;
@@ -241,99 +236,53 @@ li {
           }
 
           .fashion_dropdown_content {
-            
-            // display: flex;
-            // display: none;
-            .content_1 {
-              
-              .fashion_blog_1{
-                background: url(https://source.unsplash.com/250x201/?fashion)
-                no-repeat;
-              }
-              .fashion_blog_2{
-                background: url(https://source.unsplash.com/250x202/?fashion)
-                no-repeat;
-              }
-              .fashion_blog_3{
-                background: url(https://source.unsplash.com/250x203/?fashion)
-                no-repeat;
-              }
-              .fashion_blog_4{
-                background: url(https://source.unsplash.com/250x204/?fashion)
-                no-repeat;
-              }
 
+            .content_1 {
+              @for $x from 1 through 4 {
+                .fashion_blog_#{$x} {
+                  background: url(https://source.unsplash.com/250x18#{$x}/?fashion)
+                  no-repeat;
+                }
+              }
+              
+              
             }
           }
           .music_dropdown_content {
-            // opacity: 0;
-            // display: flex;
-            // display: none;
+            
             .content_1 {
-              
-              .music_blog_1{
-                background: url(https://source.unsplash.com/250x201/?music)
-                no-repeat;
+              @for $x from 1 through 4 {
+                .music_blog_#{$x} {
+                  background: url(https://source.unsplash.com/250x18#{$x}/?music)
+                  no-repeat;
+                }
               }
-              .music_blog_2{
-                background: url(https://source.unsplash.com/250x202/?music)
-                no-repeat;
-              }
-              .music_blog_3{
-                background: url(https://source.unsplash.com/250x203/?music)
-                no-repeat;
-              }
-              .music_blog_4{
-                background: url(https://source.unsplash.com/250x204/?music)
-                no-repeat;
-              }
+             
 
             }
           }
           .photography_dropdown_content {
-            // opacity: 0;
-            // display: flex;
-            //  display: none;
+          
             .content_1 {
-             
-              .photography_blog_1{
-                background: url(https://source.unsplash.com/250x201/?photography)
-                no-repeat;
+              @for $x from 1 through 4 {
+                .photography_blog_#{$x} {
+                  background: url(https://source.unsplash.com/250x18#{$x}/?photography)
+                  no-repeat;
+                }
               }
-              .photography_blog_2{
-                background: url(https://source.unsplash.com/250x202/?photography)
-                no-repeat;
-              }
-              .photography_blog_3{
-                background: url(https://source.unsplash.com/250x203/?photography)
-                no-repeat;
-              }
-              .photography_blog_4{
-                background: url(https://source.unsplash.com/250x204/?photography)
-                no-repeat;
-              }
+          
 
             }
           }
           .technology_dropdown_content {
           .content_1 {
-            
-              .technology_blog_1{
-                background: url(https://source.unsplash.com/250x201/?technology)
+            @for $x from 1 through 4 {
+              .technology_blog_#{$x} {
+                background: url(https://source.unsplash.com/250x18#{$x}/?technology)
                 no-repeat;
               }
-              .technology_blog_2{
-                background: url(https://source.unsplash.com/250x202/?technology)
-                no-repeat;
-              }
-              .technology_blog_3{
-                background: url(https://source.unsplash.com/250x203/?technology)
-                no-repeat;
-              }
-              .technology_blog_4{
-                background: url(https://source.unsplash.com/250x204/?technology)
-                no-repeat;
-              }
+            }
+
 
             }
           }
