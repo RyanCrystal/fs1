@@ -1,14 +1,25 @@
 @keyframes fadeInDown {
   0% {
     opacity: 0;
-    transform: translate3d(0, -10px, 0), scale(0); }
+    transform: translate3d(0, -10px, 0); }
   100% {
     opacity: 1; } }
+
+@keyframes carousel-content-down {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0); }
+  20% {
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
 
 .container {
   width: 80%;
@@ -22,7 +33,8 @@ li {
   display: inline-block; }
   li a {
     text-decoration: none;
-    color: #fff; }
+    color: #fff;
+    box-sizing: content-box; }
 
 #header-top {
   background: #131212;
@@ -52,7 +64,7 @@ li {
   background: #000;
   position: sticky;
   top: 0;
-  z-index: 10; }
+  z-index: 21; }
   #header .container {
     justify-content: space-between; }
     #header .container .logo img {
@@ -239,7 +251,7 @@ li {
       width: 300%;
       transition: margin 0.5s; }
       #carousel .carousel_container .carousel_inner .carousel_item {
-        width: 33.33%;
+        width: 33.33333%;
         height: 100%;
         background-position: center;
         background-size: cover;
@@ -248,24 +260,192 @@ li {
         color: #413535;
         float: left;
         overflow: hidden; }
+        #carousel .carousel_container .carousel_inner .carousel_item:before {
+          content: '';
+          height: 100%;
+          width: 100%;
+          background: rgba(8, 8, 8, 0.6);
+          position: absolute;
+          top: 0;
+          left: 0; }
+        #carousel .carousel_container .carousel_inner .carousel_item .carousel_content {
+          position: relative;
+          text-align: left;
+          margin: 0 auto;
+          width: 80%;
+          z-index: 1; }
+          #carousel .carousel_container .carousel_inner .carousel_item .carousel_content h1 {
+            font-size: 64px;
+            color: #fff;
+            font-weight: 700; }
+            #carousel .carousel_container .carousel_inner .carousel_item .carousel_content h1.animated {
+              animation-name: carousel-content-down;
+              animation-duration: 2s; }
+          #carousel .carousel_container .carousel_inner .carousel_item .carousel_content p {
+            font-size: 20px;
+            color: #dfd9d9; }
+            #carousel .carousel_container .carousel_inner .carousel_item .carousel_content p.animated {
+              animation-name: carousel-content-down;
+              animation-duration: 2s;
+              animation-fill-mode: backwards; }
+          #carousel .carousel_container .carousel_inner .carousel_item .carousel_content .carousel_item_btn {
+            margin-top: 50px; }
+            #carousel .carousel_container .carousel_inner .carousel_item .carousel_content .carousel_item_btn.animated {
+              animation-name: carousel-content-down;
+              animation-duration: 2s; }
+            #carousel .carousel_container .carousel_inner .carousel_item .carousel_content .carousel_item_btn a {
+              font-family: 'Open Sans', sans-serif;
+              text-decoration: none;
+              background: orange;
+              padding: 8px 20px;
+              color: #fff;
+              margin-right: 20px;
+              border-radius: 2px; }
+              #carousel .carousel_container .carousel_inner .carousel_item .carousel_content .carousel_item_btn a:nth-child(2) {
+                background: #3d3a3a;
+                opacity: 0.8; }
 
 #carousel_1:checked ~ *.carousel_inner {
-  margin-left: 0; }
-
-#carousel_2:checked ~ *.carousel_inner {
-  margin-left: -100%; }
-
-#carousel_3:checked ~ *.carousel_inner {
-  margin-left: -200%; }
-
-#carousel_4:checked ~ *.carousel_inner {
-  margin-left: -300%; }
+  margin-left: 0%; }
 
 #carousel_1:checked ~ .carousel_nav label[for='carousel_1'] {
   background: orange; }
 
+#carousel_2:checked ~ *.carousel_inner {
+  margin-left: -100%; }
+
 #carousel_2:checked ~ .carousel_nav label[for='carousel_2'] {
   background: orange; }
 
+#carousel_3:checked ~ *.carousel_inner {
+  margin-left: -200%; }
+
 #carousel_3:checked ~ .carousel_nav label[for='carousel_3'] {
   background: orange; }
+
+#features {
+  margin-bottom: 50px; }
+  #features .container {
+    display: block; }
+    #features .container .features_text {
+      margin: 50px auto;
+      width: 60%; }
+      #features .container .features_text h1 {
+        font-size: 40px;
+        text-align: center; }
+    #features .container .features_item_container {
+      display: flex; }
+      #features .container .features_item_container .feature_item:not(1) {
+        margin-left: 30px; }
+      #features .container .features_item_container .feature_item:hover .icon_container {
+        background: orangered; }
+        #features .container .features_item_container .feature_item:hover .icon_container i {
+          color: #fff; }
+      #features .container .features_item_container .feature_item .icon_container {
+        height: 50px;
+        width: 50px;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #cfcbcb; }
+        #features .container .features_item_container .feature_item .icon_container i {
+          color: #c0baba; }
+
+#recent_work {
+  background: #cfc4c4;
+  padding: 50px 0;
+  text-align: center; }
+  #recent_work h1 {
+    font-size: 40px; }
+  #recent_work p {
+    display: inline-block;
+    width: 60%;
+    padding-bottom: 30px; }
+  #recent_work .container {
+    display: block;
+    text-align: center; }
+    #recent_work .container .gallery {
+      display: grid;
+      grid-gap: none;
+      grid-column-gap: none;
+      grid-row-gap: none;
+      width: 90%;
+      position: relative;
+      grid-template-columns: repeat(3, 1fr); }
+      #recent_work .container .gallery .gallery-item {
+        background-size: 380px 380px;
+        background-position: 50% 50%;
+        position: relative;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 380px;
+        height: 380px;
+        transition: 0.5s; }
+        #recent_work .container .gallery .gallery-item a {
+          opacity: 0;
+          height: 50px;
+          width: 50px;
+          background: orangered;
+          position: relative;
+          z-index: 10;
+          transition: all 0.5s;
+          border-radius: 50%; }
+          #recent_work .container .gallery .gallery-item a i {
+            line-height: 50px; }
+        #recent_work .container .gallery .gallery-item:hover {
+          background-size: 500px 500px  !important;
+          background-position: center; }
+          #recent_work .container .gallery .gallery-item:hover a {
+            opacity: 1;
+            transform: scale(1.2);
+            color: #fff; }
+          #recent_work .container .gallery .gallery-item:hover:before {
+            content: '';
+            background: rgba(61, 58, 58, 0.4);
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0; }
+  #recent_work .btn_show {
+    display: inline-block;
+    margin-top: 50px;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 20px;
+    background: orangered;
+    border-radius: 5px;
+    cursor: pointer; }
+
+#our_service {
+  padding-bottom: 50px; }
+  #our_service .container {
+    display: block; }
+    #our_service .container .service_text {
+      text-align: center;
+      margin: 50px auto; }
+      #our_service .container .service_text h1 {
+        font-size: 40px; }
+    #our_service .container .service_group {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 30px; }
+      #our_service .container .service_group .service_group_item {
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        #our_service .container .service_group .service_group_item p {
+          color: #7e7b7b; }
+        #our_service .container .service_group .service_group_item i {
+          color: #9c9595;
+          padding: 30px; }
+        #our_service .container .service_group .service_group_item:hover {
+          background: #fff;
+          border: 0px outset #615e5e;
+          box-shadow: 1px 3px #dfdddd; }
+          #our_service .container .service_group .service_group_item:hover i {
+            color: orangered; }
