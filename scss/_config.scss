@@ -1,0 +1,59 @@
+@keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, -10px, 0);
+  
+    }
+    100% {
+      opacity: 1;
+      // transform: translate(0);
+  
+    }
+  }
+  
+  @keyframes carousel-content-down{
+    0% {
+      opacity: 0;
+      // display: none;
+     transform: translate3d(0,-100%,0)
+    }
+    20%{
+      opacity: 0;
+    }
+  
+    100%{
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  @mixin moveDown {
+    animation-name: fadeInDown;
+    animation-duration: 500ms;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  $dropdown-color: rgb(59, 55, 55);
+  $dropdown-bg-color:rgb(240, 235, 235);
+// Media Query Mixins
+@mixin mediaSm {
+    @media screen and (max-width: 500px) {
+      @content;
+    }
+  }
+  
+  @mixin mediaMd {
+    @media screen and (max-width: 786px) {
+      @content;
+    }
+  }
+  @mixin mediaLg {
+    @media screen and (max-width: 1061px) {
+      @content;
+    }
+  }
+  @mixin mediaXl {
+    @media screen and (min-width: 1171px) {
+      @content;
+    }
+  }

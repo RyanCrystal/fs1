@@ -4,6 +4,12 @@ window.onload = function(){
     // }, 1000);
     const blog_dropdown = document.querySelectorAll('.dropdown_content');
     const blog_dropdown_title = document.querySelectorAll('.blog_dropdown_title>a');
+    const btn = document.querySelector('.buttons');
+    const menu = document.querySelector('.menu');
+    btn.addEventListener('click',function(){
+menu.classList.toggle('active');
+    })
+
     
     // toggle active class to make hover effect
     for(let i=0;i<blog_dropdown_title.length;i++){

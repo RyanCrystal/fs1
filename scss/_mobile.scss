@@ -1,0 +1,108 @@
+@include mediaLg {
+ #header{
+     position: relative;
+     .container{
+        //  position: relative;
+         .logo{
+             visibility: hidden;
+         }
+        //  display: block;
+         .menu{
+             display: block;
+             position: absolute;
+             top:100%;
+             opacity: 0;
+             visibility: hidden;
+             &.active{
+                 opacity: 1;
+                 visibility:visible;
+             }
+            //  right: 0;
+             background: rgba(0,0,0,0.8);
+             .menu_item{
+                 display: block;
+                 margin: 0;
+                 padding: 0;
+                 line-height: 40px;
+                 &.menu_blog{
+                     .blog_dropdown{
+                         display: block;
+                         .dropdown_content{
+                             display: none;
+                         }
+                     }
+                 }
+                
+             }
+         }
+         .buttons{
+            display: block;
+            
+         }
+     }
+ }   
+}
+
+@include mediaMd{
+    #features{
+        .container{
+            .features_item_container{
+                display: block;
+                text-align: center;
+                .feature_item{
+                    display: inline-block;
+                    padding-bottom: 30px;
+                }
+                .icon_container{
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    #recent_work{
+        .work_container{
+            .gallery{
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+    }
+
+    #our_service{
+        .container{
+            .service_group{
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+        .our_service_skills{
+            .service_container{
+                width: 100%;
+                .service_progress{
+                    display: block;
+                    width: 100%;
+                    .progress_column{
+                        // margin: 0 auto;
+                        width: 100%;
+                        .service_progress_item{
+                            margin: 30px auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+   #testimonial{
+       .container{
+           width: 100%;
+           .testimonial_cards{
+               display: block;
+               .card{
+                   margin: 0 auto;
+                   width: 90%;
+               }
+           }
+       }
+   } 
+}

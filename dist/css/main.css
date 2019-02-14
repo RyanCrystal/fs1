@@ -67,6 +67,18 @@ li {
   z-index: 21; }
   #header .container {
     justify-content: space-between; }
+    #header .container .buttons {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 20px;
+      cursor: pointer;
+      z-index: 1000; }
+      #header .container .buttons .button {
+        background: #fff;
+        width: 30px;
+        height: 3px;
+        margin: 0 0 5px 0; }
     #header .container .logo img {
       padding: 5px; }
     #header .container .menu {
@@ -88,7 +100,7 @@ li {
           height: 150px;
           display: block;
           line-height: 50px;
-          background: #fff;
+          background: #f0ebeb;
           padding: 0;
           padding-left: 10px; }
           #header .container .menu .menu_item .dropdown-page li {
@@ -99,6 +111,17 @@ li {
               color: #3b3737; }
         #header .container .menu .menu_item.menu_element {
           position: static; }
+          #header .container .menu .menu_item.menu_element::before {
+            content: '';
+            position: absolute;
+            height: 0;
+            width: 0;
+            opacity: 0;
+            border-style: solid;
+            border-width: 20px 15px;
+            border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #f0ebeb rgba(0, 0, 0, 0);
+            bottom: 0;
+            margin-left: 21px; }
           #header .container .menu .menu_item.menu_element .hot {
             color: #fff;
             font-size: 8px;
@@ -125,14 +148,24 @@ li {
           #header .container .menu .menu_item .elements .addonlist {
             width: 100%;
             display: block;
-            background: #fff; }
+            background: #f0ebeb; }
             #header .container .menu .menu_item .elements .addonlist li {
               display: block; }
               #header .container .menu .menu_item .elements .addonlist li :hover {
                 color: orangered; }
             #header .container .menu .menu_item .elements .addonlist a {
               color: #3b3737; }
+      #header .container .menu .menu_element:hover::before {
+        animation-name: fadeInDown;
+        animation-duration: 500ms;
+        opacity: 1;
+        visibility: visible; }
       #header .container .menu .menu_element:hover .elements {
+        animation-name: fadeInDown;
+        animation-duration: 500ms;
+        opacity: 1;
+        visibility: visible; }
+      #header .container .menu .menu_pages:hover::before {
         animation-name: fadeInDown;
         animation-duration: 500ms;
         opacity: 1;
@@ -144,12 +177,34 @@ li {
         visibility: visible; }
       #header .container .menu .menu_pages {
         line-height: 88px; }
+        #header .container .menu .menu_pages::before {
+          content: '';
+          position: absolute;
+          height: 0;
+          width: 0;
+          opacity: 0;
+          border-style: solid;
+          border-width: 20px 15px;
+          border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #f0ebeb rgba(0, 0, 0, 0);
+          bottom: 0;
+          margin-left: 10px; }
       #header .container .menu .menu_blog {
         line-height: 88px; }
+        #header .container .menu .menu_blog::before {
+          content: '';
+          position: absolute;
+          height: 0;
+          width: 0;
+          opacity: 0;
+          border-style: solid;
+          border-width: 20px 15px;
+          border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #f0ebeb rgba(0, 0, 0, 0);
+          bottom: 0;
+          margin-left: 10px; }
         #header .container .menu .menu_blog .blog_dropdown {
           visibility: hidden;
           opacity: 0;
-          background: #c7c4c4;
+          background: #f0ebeb !important;
           display: flex;
           position: absolute;
           top: auto;
@@ -162,14 +217,17 @@ li {
           left: 0;
           text-align: left; }
           #header .container .menu .menu_blog .blog_dropdown .dropdown_content {
-            display: none; }
+            display: none;
+            width: 100%; }
             #header .container .menu .menu_blog .blog_dropdown .dropdown_content .content_container {
+              width: 100%;
               margin: 0 10px; }
               #header .container .menu .menu_blog .blog_dropdown .dropdown_content .content_container h4 {
                 line-height: 15px;
                 margin: 10px auto; }
               #header .container .menu .menu_blog .blog_dropdown .dropdown_content .content_container .blog {
                 height: 180px;
+                width: 100%;
                 background-size: cover;
                 background-position: 50%; }
             #header .container .menu .menu_blog .blog_dropdown .dropdown_content.active {
@@ -214,6 +272,11 @@ li {
             background: url(https://source.unsplash.com/250x183/?technology) no-repeat; }
           #header .container .menu .menu_blog .blog_dropdown .technology_dropdown_content .content_container .technology_blog_4 {
             background: url(https://source.unsplash.com/250x184/?technology) no-repeat; }
+      #header .container .menu .menu_blog:hover::before {
+        animation-name: fadeInDown;
+        animation-duration: 500ms;
+        opacity: 1;
+        visibility: visible; }
       #header .container .menu .menu_blog:hover .blog_dropdown {
         animation-name: fadeInDown;
         animation-duration: 500ms;
@@ -221,7 +284,7 @@ li {
         visibility: visible; }
 
 #carousel {
-  height: 500px;
+  height: 600px;
   overflow: hidden; }
   #carousel .carousel_container {
     position: relative;
@@ -253,8 +316,7 @@ li {
       #carousel .carousel_container .carousel_inner .carousel_item {
         width: 33.33333%;
         height: 100%;
-        background-position: center;
-        background-size: cover;
+        background-position: 20% 0%;
         background-repeat: no-repeat;
         position: relative;
         color: #413535;
@@ -264,7 +326,7 @@ li {
           content: '';
           height: 100%;
           width: 100%;
-          background: rgba(8, 8, 8, 0.6);
+          background: rgba(8, 8, 8, 0.5);
           position: absolute;
           top: 0;
           left: 0; }
@@ -579,3 +641,60 @@ li {
       margin-left: 10px;
       text-decoration: none;
       color: #fff; }
+
+@media screen and (max-width: 1061px) {
+  #header {
+    position: relative; }
+    #header .container .logo {
+      visibility: hidden; }
+    #header .container .menu {
+      display: block;
+      position: absolute;
+      top: 100%;
+      opacity: 0;
+      visibility: hidden;
+      background: rgba(0, 0, 0, 0.8); }
+      #header .container .menu.active {
+        opacity: 1;
+        visibility: visible; }
+      #header .container .menu .menu_item {
+        display: block;
+        margin: 0;
+        padding: 0;
+        line-height: 40px; }
+        #header .container .menu .menu_item.menu_blog .blog_dropdown {
+          display: block; }
+          #header .container .menu .menu_item.menu_blog .blog_dropdown .dropdown_content {
+            display: none; }
+    #header .container .buttons {
+      display: block; } }
+
+@media screen and (max-width: 786px) {
+  #features .container .features_item_container {
+    display: block;
+    text-align: center; }
+    #features .container .features_item_container .feature_item {
+      display: inline-block;
+      padding-bottom: 30px; }
+    #features .container .features_item_container .icon_container {
+      margin: 0 auto; }
+  #recent_work .work_container .gallery {
+    grid-template-columns: repeat(1, 1fr); }
+  #our_service .container .service_group {
+    grid-template-columns: repeat(1, 1fr); }
+  #our_service .our_service_skills .service_container {
+    width: 100%; }
+    #our_service .our_service_skills .service_container .service_progress {
+      display: block;
+      width: 100%; }
+      #our_service .our_service_skills .service_container .service_progress .progress_column {
+        width: 100%; }
+        #our_service .our_service_skills .service_container .service_progress .progress_column .service_progress_item {
+          margin: 30px auto; }
+  #testimonial .container {
+    width: 100%; }
+    #testimonial .container .testimonial_cards {
+      display: block; }
+      #testimonial .container .testimonial_cards .card {
+        margin: 0 auto;
+        width: 90%; } }
