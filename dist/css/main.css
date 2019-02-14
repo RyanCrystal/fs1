@@ -370,7 +370,8 @@ li {
       grid-gap: none;
       grid-column-gap: none;
       grid-row-gap: none;
-      width: 90%;
+      width: 100%;
+      height: 100%;
       position: relative;
       grid-template-columns: repeat(3, 1fr); }
       #recent_work .container .gallery .gallery-item {
@@ -381,8 +382,9 @@ li {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 380px;
-        height: 380px;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
         transition: 0.5s; }
         #recent_work .container .gallery .gallery-item a {
           opacity: 0;
@@ -391,6 +393,7 @@ li {
           background: orangered;
           position: relative;
           z-index: 10;
+          top: -45%;
           transition: all 0.5s;
           border-radius: 50%; }
           #recent_work .container .gallery .gallery-item a i {
@@ -421,9 +424,10 @@ li {
     cursor: pointer; }
 
 #our_service {
-  padding-bottom: 50px; }
+  padding-top: 30px; }
   #our_service .container {
-    display: block; }
+    display: block;
+    padding-bottom: 30px; }
     #our_service .container .service_text {
       text-align: center;
       margin: 50px auto; }
@@ -449,3 +453,126 @@ li {
           box-shadow: 1px 3px #dfdddd; }
           #our_service .container .service_group .service_group_item:hover i {
             color: orangered; }
+  #our_service .our_service_skills {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    background-image: url("../img/our_service_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    position: relative; }
+    #our_service .our_service_skills:before {
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      background: rgba(92, 89, 89, 0.6); }
+    #our_service .our_service_skills .service_container {
+      position: relative;
+      z-index: 2;
+      width: 80%;
+      margin: 0 auto; }
+      #our_service .our_service_skills .service_container .service_skill_text {
+        text-align: center;
+        color: #fff; }
+        #our_service .our_service_skills .service_container .service_skill_text h1 {
+          font-size: 40px; }
+        #our_service .our_service_skills .service_container .service_skill_text p {
+          display: inline-block;
+          width: 80%;
+          margin-bottom: 40px; }
+    #our_service .our_service_skills .service_progress {
+      display: flex; }
+      #our_service .our_service_skills .service_progress .progress_column {
+        width: 50%; }
+      #our_service .our_service_skills .service_progress .service_progress_item {
+        width: 80%;
+        margin-bottom: 30px; }
+        #our_service .our_service_skills .service_progress .service_progress_item .progress_text {
+          margin-bottom: 10px; }
+        #our_service .our_service_skills .service_progress .service_progress_item .progress_bar {
+          height: 10px;
+          background: #c4c0c0;
+          border-radius: 4px; }
+          #our_service .our_service_skills .service_progress .service_progress_item .progress_bar .progress_bar_taken {
+            width: 85%;
+            background: #db3535;
+            color: #000;
+            height: 100%;
+            position: relative;
+            border-radius: 4px 0 0 4px; }
+            #our_service .our_service_skills .service_progress .service_progress_item .progress_bar .progress_bar_taken .progress_bar_percent {
+              position: absolute;
+              top: -100%;
+              margin-top: -25px;
+              right: -20px;
+              padding: 0 12px;
+              background: #e4dede;
+              font-size: 12px;
+              font-weight: bold;
+              line-height: 24px; }
+              #our_service .our_service_skills .service_progress .service_progress_item .progress_bar .progress_bar_taken .progress_bar_percent::before {
+                content: '';
+                position: absolute;
+                top: 100%;
+                height: 10px;
+                width: 10px;
+                margin-top: 8px;
+                right: 18px;
+                border-radius: 50%;
+                border: 3px solid #fff; }
+              #our_service .our_service_skills .service_progress .service_progress_item .progress_bar .progress_bar_taken .progress_bar_percent:after {
+                content: '';
+                position: absolute;
+                top: 100%;
+                height: 0;
+                width: 0;
+                right: 20px;
+                border-width: 5px 6px;
+                border-style: solid;
+                border-color: #e4dede rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0); }
+
+#testimonial {
+  background: #f0eeee; }
+  #testimonial .container {
+    display: block;
+    text-align: center; }
+    #testimonial .container h1 {
+      margin: 0;
+      padding-top: 30px;
+      font-size: 40px; }
+    #testimonial .container p {
+      margin-bottom: 40px; }
+    #testimonial .container .testimonial_cards {
+      display: flex; }
+      #testimonial .container .testimonial_cards .card {
+        background: #fff;
+        width: 30%;
+        margin: 30px; }
+        #testimonial .container .testimonial_cards .card img {
+          padding-top: 30px;
+          border-radius: 50%; }
+        #testimonial .container .testimonial_cards .card p {
+          display: inline-block;
+          padding: 20px;
+          padding-bottom: 0px; }
+        #testimonial .container .testimonial_cards .card:not(3) {
+          margin-left: 20px; }
+
+#footer {
+  background: #363636;
+  color: #fff;
+  padding-top: 20px;
+  height: 50px;
+  align-items: center; }
+  #footer .container {
+    justify-content: space-between; }
+    #footer .container span {
+      color: #fff; }
+    #footer .container a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: #fff; }

@@ -68,9 +68,6 @@ window.onload = function(){
     
     carousel_content_p[k-1].classList.add('animated');
     carousel_btn[k-1].classList.add('animated');
-    
-    
-    
             i++;         
         }
         
